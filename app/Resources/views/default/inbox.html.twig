@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="container">
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="card-panel teal lighten-2">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
             <div id="tableMessage">
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
@@ -73,7 +79,7 @@
                     {{ form_widget(form.content) }}
                     {{ form_label(form.content) }}
                 </div>
-                <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>send</a>
+                <input type="submit" value="send" class="waves-effect waves-light btn"><i class="material-icons left">send</i>
                 <a href="#!" id="seeMessage" class="waves-effect waves-light btn"><i class="material-icons left">comment</i>messages</a>
 
             </div>

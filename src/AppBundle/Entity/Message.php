@@ -77,6 +77,7 @@ class Message
      */
     public function setAuthor($author)
     {
+
         $this->author = $author;
 
         return $this;
@@ -143,7 +144,7 @@ class Message
     /**
      * @return string
      */
-    public function getRecipient(): string
+    public function getRecipient()
     {
         return $this->recipient;
     }
@@ -159,7 +160,7 @@ class Message
     /**
      * @return string
      */
-    public function getSubject(): string
+    public function getSubject()
     {
         return $this->subject;
     }

@@ -17,32 +17,45 @@ class MessageType extends AbstractType
     {
         $builder
             ->add('author', TextType::class,
-                ['attr'=>
-                    ['class'=>'validate']
+                [
+                    'attr'=>
+                    [
+                        'class'=>'validate']
                 ],
                 [
-                    'label_attr'=>['data-error'=>'the author is not valid']
+                    'label_attr'=>[
+                        'data-error'=>'the author is not valid'
+                    ]
                 ])
             ->add('recipient', EmailType::class,
                 ['attr'=>
-                    ['class'=>'validate']
+                    [
+                        'class'=>'validate']
                 ],
                 [
-                    'label_attr'=>['data-error'=>'the email is not valid']
+                    'label_attr'=>[
+                        'data-error'=>'the email is not valid'
+                    ]
                 ])
             ->add('subject', TextType::class,
-                ['attr'=>
-                    ['class'=>'validate']
+                [
+                    'attr'=>
+                    [
+                        'class'=>'validate']
                 ],
                 [
-                    'label_attr'=>['data-error'=>'the subject is not valid']
+                    'label_attr'=>[
+                        'data-error'=>'the subject is not valid'
+                    ]
                 ])
             ->add('content', TextType::class,
                 ['attr'=>
-                    ['class'=>'validate']
+                    [
+                        'class'=>'validate']
                 ],
                 [
-                    'label_attr'=>['data-error'=>'the content is not valid']
+                    'label_attr'=>[
+                        'data-error'=>'the content is not valid']
                 ]);
 
     }
@@ -53,7 +66,8 @@ class MessageType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Message'
+            'data_class' => 'AppBundle\Entity\Message',
+            'csrf_protection' => false,
         ));
     }
 
