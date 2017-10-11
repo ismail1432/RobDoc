@@ -14,8 +14,21 @@ $(document).ready(function(){
     //Modal
     $('.modal').modal(
         {
-            opacity: 0
+            opacity: 0,
         }
     );
 
+    $('.answerMsg').click(function (e) {
+        e.preventDefault();
+        $('#tableMessage').fadeOut('250', function () {
+            $('#formArea').css('display', 'block').fadeIn('250');
+
+        });
+    });
+    $('#seeMessage').click(function (e) {
+        e.preventDefault();
+        $('#formArea').fadeOut('250', function () {
+            $('#tableMessage').css('display', 'block').fadeIn('250');
+        });
+    })
 });
