@@ -34,3 +34,7 @@ services:
        public: true
        arguments:
                   - '@doctrine.orm.entity_manager'
+
+    app.security.login_form_authenticator:
+        class: AppBundle\Security\LoginFormAuthenticator
+        autowire: true

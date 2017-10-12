@@ -20,9 +20,9 @@ class RobDocController extends Controller
     }
 
     /**
-     * @Route("/inbox", name="inbox")
+     * @Route("/inbox/{page}", name="inbox", requirements={"page": "\d+"})
      */
-    public function inboxAction(Request $request, MessageManager $messageManager)
+    public function inboxAction(Request $request, MessageManager $messageManager, $page = 1)
     {
         $form = $this->createForm(MessageType::class);
         $form->handleRequest($request);
