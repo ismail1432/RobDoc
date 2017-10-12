@@ -1,4 +1,5 @@
 robdoc
 ======
-
-A Symfony project created on October 11, 2017, 8:32 pm.
+# Project
+Built with symfony RobDoc @pp is a SaaS for companies with many features like 
+internal messaging, human resources... 
