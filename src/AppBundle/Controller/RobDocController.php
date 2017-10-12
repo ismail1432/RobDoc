@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class RobDocController extends Controller
 {
+
     /**
      * @Route("/", name="homepage")
      */
@@ -26,6 +27,7 @@ class RobDocController extends Controller
     {
         $form = $this->createForm(MessageType::class);
         $form->handleRequest($request);
+
         if($form->isValid() && $request->isMethod('POST')){
             $message = $form->getData();
             $messageManager->saveMessage($message);

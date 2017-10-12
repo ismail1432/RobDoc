@@ -6,10 +6,9 @@
  * Time: 08:31
  */
 
-namespace AppBundle\Controller;
+namespace AppBundle\Controller\Security;
 
 
-use AppBundle\Form\LoginForm;
 use AppBundle\Form\LoginFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

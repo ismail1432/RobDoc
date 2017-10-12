@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="container">
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="card-panel teal lighten-2">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+<h1>New Employee</h1>
+        </div>
+    </main>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

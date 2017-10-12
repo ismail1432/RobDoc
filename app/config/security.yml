@@ -24,6 +24,9 @@ security:
             provider: our_users
             logout:
                   path: /logout
+
+    access_denied_url: /login
+
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        #- { path: ^/, roles: ROLE_ADMIN }
+        - { path: ^/, roles: ROLE_USER }

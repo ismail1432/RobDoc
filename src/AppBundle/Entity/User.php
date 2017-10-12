@@ -71,7 +71,7 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        return ['ROLES_ADMINZER'];
+        return ['ROLE_USER'];
     }
 
     public function getMail()

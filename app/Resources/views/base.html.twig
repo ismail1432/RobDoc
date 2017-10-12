@@ -51,21 +51,20 @@
         <header class="demo-drawer-header">
             <img src="{{ asset('images/user.jpg') }}" class="demo-avatar">
             <div class="demo-avatar-dropdown">
-                <span>contact@smaine.</span>
+                <span>{{ app.user.username }}.</span>
                 <div class="mdl-layout-spacer"></div>
                 <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">arrow_drop_down</i>
                     <span class="visuallyhidden">Accounts</span>
                 </button>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                    <li class="mdl-menu__item">hello@example.com</li>
-                    <li class="mdl-menu__item">info@example.com</li>
-                    <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+                    <li class="mdl-menu__item"><a  href="{{ path('logout') }}">Logout</a></li>
+                    <li class="mdl-menu__item"><a  href="{{ path('add_employee') }}"><i class="material-icons">add</i>Add another account...</li>
                 </ul>
             </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <a class="mdl-navigation__link" {% if title == 'Home' %} style="background-color: #00BCD4; !important;" {% endif %}  href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+            <a class="mdl-navigation__link" {% if title == 'Home' %} style="background-color: #00BCD4; !important;" {% endif %}  href="{{ path('homepage') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
             <a class="mdl-navigation__link"  {% if title == 'Inbox' %} style="background-color: #00BCD4; !important;" {% endif %} href="{{ path('inbox') }}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
